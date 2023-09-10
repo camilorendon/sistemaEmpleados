@@ -203,7 +203,10 @@ usuarios usu=new usuarios();
         
         usu=user.login(txtUser.getText(), txtPass.getText());
         if(usu.getUsuario() != null && usu.getPassword() != null){
-            JOptionPane.showConfirmDialog(null, "Bienvenido");
+            //JOptionPane.showMessageDialog(null, "Bienvenido");
+            MenuPrincipal m=new MenuPrincipal();
+            m.setVisible(true);
+            dispose();
         }else{
             JOptionPane.showConfirmDialog(null, "Acceso denegado");
         }
